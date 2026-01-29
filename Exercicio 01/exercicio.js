@@ -18,10 +18,11 @@ entradaDeDados.question('Favor digitar o seu nome: ', function(nomeUsuario){
         // Converte para número
         var num1 = Number(numeros[0])
         var num2 = Number(numeros[1])
+        var num3 = Number(numeros[2])
 
         // Faz a soma
-        var resultado = num1 + num2
+        var resultado = num1 + num2 + num3
 
-        console.log(`A soma de ${num1} + ${num2} é: ${resultado}`)
+        console.log(`A soma de ${num1} + ${num2} + ${num2} é: ${resultado}`)
     })
 })
