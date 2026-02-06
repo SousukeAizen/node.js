@@ -15,7 +15,7 @@ var readline = require('readline')
 
 //Cria uma interface para entrada e saida de dados pelo terminal
 var entradaDeDados = readline.createInterface({
-    imput: process.stdin,
+    input: process.stdin,
     output: process.stdout
 })
 

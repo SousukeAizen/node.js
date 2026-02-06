@@ -1,28 +1,34 @@
-// Import da biblioteca para captar entrada de dados via terminal
-var readline = require('readline')
+//Import da Biblioteca
+var readline = require ('readline')
 
-// Cria uma interface para entrada e saída de dados pelo terminal
-var entradaDeDados = readline.createInterface({
+// Cria uma interface para entrada e saida de dados pelo terminal
+
+var entradaDados = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-});
+})
+//Entrada de dados para o nome do usuario
+entradaDados.question('Favor digite seu nome: ', function(nomeUsuario){
+    console.log('O nome do usuario é: ' + nomeUsuario)
 
-// Pergunta o nome do usuário
-entradaDeDados.question('Favor digitar o seu nome: ', function(nomeUsuario){
-    console.log('O nome do usuário é: ' + nomeUsuario)
+    //Entrada do valor1
+    entradaDados.question('Favor digitar valor 1: ', function(valor1){
 
-    // Pergunta os números para somar
-    entradaDeDados.question('Digite dois números separados por espaço: ', function(valores){
-        var numeros = valores.split(' ')
+        //Entrada do valor2
+        entradaDados.question('Favor digitar valor 2: ', function(valor2){
 
-        // Converte para número
-        var num1 = Number(numeros[0])
-        var num2 = Number(numeros[1])
-        var num3 = Number(numeros[2])
+            //Entrada do valor3
+            entradaDados.question('Favor digitar valor 3: ', function(valor3){
+        
+             //Realiza a soma dos valores
+             var soma = Number(valor1) + Number(valor2) + Number(valor3)
 
-        // Faz a soma
-        var resultado = num1 + num2 + num3
+               console.log ('A soma é: ' + soma)
 
-        console.log(`A soma de ${num1} + ${num2} + ${num2} é: ${resultado}`)
+             })
+        
+        })
+
     })
+
 })

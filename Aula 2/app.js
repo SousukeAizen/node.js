@@ -83,11 +83,21 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     
                     */
 
+                         /*
+                            Conversão de tipos de dados
+                                parseInt() -> Permite converter uma String para numero inteiro
+                                parseFloat() -> Permite converter uma String para numero Decimal
+                                Number() -> Permite converter uma String para Numero (inteiro ou decimal)
+                                String() -> Permite converter um conteudo para String
+                                Boolean() -> Permite converter um conteudo para Booleano
+                                typeof() -> Permite verificar o tipo de dado da variavel
+                        */
+                    
                     //Validação de entrada vazia
                     if(nomeAluno == '' || nota1 == '' || nota2 == '' || nota3 == '' || nota4 == ''){
                         console.log('ERRO: é obrigatório o preenchimento de todos os dados!!!')
 
-                    //Validação de numeros entre 0 e 100
+                        //Validação de numeros entre 0 e 100
                     }else if(nota1 < 0 || nota1 > 100 || nota2 < 0 || nota2 > 100 || nota3 < 0 || nota3 > 100 || nota4 < 0 || nota4 > 100){
                         console.log('ERRO: Somente é permitido a entrada de valores entre 0 e 100.')
 
@@ -117,8 +127,6 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                         //Saida do boletim do aluno
                         console.log(`Aluno(a) ${nomeAluno}  \n Média Final:  ${media.toFixed(2)} \n e está: ${statusAluno} `)   
                 }
-
-
 
                 })//Fecha a nota 4
             })//Fecha a nota 3
